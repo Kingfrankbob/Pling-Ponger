@@ -66,6 +66,7 @@ namespace PlingPong
                     Console.WriteLine("Player 2 Wins!");
                 else
                     Console.WriteLine("Player 1 Wins!");
+                return;
             }
         }
         public char[,] Iterate(char[,] Canvas)
