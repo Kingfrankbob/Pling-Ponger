@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Pling Ponger/1.0.0": {
+        "runtime": {
+          "Pling Ponger.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Pling Ponger/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
