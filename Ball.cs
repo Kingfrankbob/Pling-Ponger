@@ -36,57 +36,67 @@ namespace PlingPong
         }
         private void Check(char[,] Canvas, int x, int y)
         {
-            //debug = (Canvas[y, x + 2] + "," + Canvas[y, x - 2]);
-            if (y - 1 < _ymin)
+            try
             {
-                Bounce(1);
-                return;
+                //debug = (Canvas[y, x + 2] + "," + Canvas[y, x - 2]);
+                if (y - 1 < _ymin)
+                {
+                    Bounce(1);
+                    return;
+                }
+                if (y + 2 > _ymax)
+                {
+                    Bounce(2);
+                    return;
+                }
+                if (Canvas[y, x + 2] == '|')
+                {
+                    Bounce(3);
+                    return;
+                }
+                if (Canvas[y, x - 2] == '|')
+                {
+                    Bounce(4);
+                    return;
+                }
             }
-            if (y + 2 > _ymax)
+            catch (Exception)
             {
-                Bounce(2);
-                return;
-            }
-            if (Canvas[y, x + 2] == '|')
-            {
-                Bounce(3);
-                return;
-            }
-            if (Canvas[y, x - 2] == '|')
-            {
-                Bounce(4);
-                return;
+                if (_x <= 0)
+                    Console.WriteLine("Player 2 Wins!");
+                else
+                    Console.WriteLine("Player 1 Wins!");
             }
         }
         public char[,] Iterate(char[,] Canvas)
         {
-            Check(Canvas, _x, _y);
-            _prevx = _x;
-            _prevy = _y;
-            Check(Canvas, _x, _y);
-            switch (_momentum)
-            {
-                case "LU":
-                    Check(Canvas, _x, _y);
-                    _x -= 1;
-                    _y -= 1;
-                    break;
-                case "LD":
-                    Check(Canvas, _x, _y);
-                    _x -= 1;
-                    _y += 1;
-                    break;
-                case "RU":
-                    Check(Canvas, _x, _y);
-                    _x += 1;
-                    _y -= 1;
-                    break;
-                case "RD":
-                    Check(Canvas, _x, _y);
-                    _x += 1;
-                    _y += 1;
-                    break;
-            }
+                _prevx = _x;
+                _prevy = _y;
+                Check(Canvas, _x, _y);
+                switch (_momentum)
+                {
+                    case "LU":
+                        Check(Canvas, _x, _y);
+                        _x -= 1;
+                        _y -= 1;
+                        break;
+                    case "LD":
+                        Check(Canvas, _x, _y);
+                        _x -= 1;
+                        _y += 1;
+                        break;
+                    case "RU":
+                        Check(Canvas, _x, _y);
+                        _x += 1;
+                        _y -= 1;
+                        break;
+                    case "RD":
+                        Check(Canvas, _x, _y);
+                        _x += 1;
+                        _y += 1;
+                        break;
+                }
+            
             Canvas[_y, _x] = '+';
             Canvas[_prevy, _prevx] = ' ';
             return Canvas;
