@@ -5,11 +5,18 @@ namespace PlingPong
     {
         public static void Main()
         {
+            var ball = new Ball(0, 10);
+            main(ball);
+            Ball.restart(ball);
+        }
 
-            var Ply1Paddle = new Paddle(3, 2, 30, 10);
-            var Ply2Paddle = new Paddle(27, 2, 30, 10);
+        public static void main(Ball ball)
+        {
+            var Ball = ball;
+            var Ply1Paddle = new Paddle(3, 6, 30, 10, Ball);
+            var Ply2Paddle = new Paddle(27, 6, 30, 10, Ball);
 
-            var Ball = new Ball(0, 10);
+
 
             char[,] CanvasArray = new char[10, 30];
 
@@ -70,5 +77,7 @@ namespace PlingPong
                 Console.Write('\n');
             }
         }
+
+
     }
 }
