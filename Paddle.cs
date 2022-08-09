@@ -40,7 +40,6 @@ namespace PlingPong
                 Canvas[_y + 1, _x + 1] = '|';
                 Canvas[_y + 2, _x] = ' ';
                 Canvas[_y + 2, _x + 1] = ' ';
-                Console.WriteLine("In try again looooooop");
                 return Canvas;
             }
             else if (_CT == true)
