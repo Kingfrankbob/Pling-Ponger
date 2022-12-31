@@ -1,3 +1,4 @@
+using System.Numerics;
 namespace PlingPong
 {
     public class Ball
@@ -11,7 +12,7 @@ namespace PlingPong
         private string _momentum = "";
         //public string debug = "";
         public Boolean start = false;
-        public Int64 count = 0;
+        public BigInteger count = new BigInteger(0);
         public Boolean Trygn = false;
         public Boolean CT = false;
         private int _prevx;

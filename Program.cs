@@ -26,51 +26,61 @@ namespace PlingPong
             Ball.Start(CanvasArray);
 
             print(CanvasArray);
-            System.Console.WriteLine("Started");
+            while (Ball.start != true)
+            {
+                if (Console.ReadKey().Key == ConsoleKey.Enter)
+                {
+                    Ball.Iterate(CanvasArray);
+                    Console.WriteLine("Started");
+                    Ball.start = true;
+                }
+            }
             while (true)
             {
-                if (Ball.count % 2 == 0)
+                if (Ball.count % 10000000 == 0)
                 {
-                    var currentKey = Console.ReadKey().Key;
-                    System.Console.WriteLine(currentKey);
-                    while (Ball.start != true)
+                    while (Console.KeyAvailable == true)
                     {
-                        if (Console.ReadKey().Key == ConsoleKey.Enter)
+                        var currentKey = Console.ReadKey().Key;
+
+                        if (currentKey == ConsoleKey.UpArrow)
                         {
-                            Ball.Iterate(CanvasArray);
-                            Console.WriteLine("Started");
-                            Ball.start = true;
+                            CanvasArray = Ply2Paddle.Paddleup(CanvasArray);
+                            print(CanvasArray);
+                            break;
                         }
-                    }
-                    if (currentKey == ConsoleKey.UpArrow)
-                    {
-                        CanvasArray = Ply2Paddle.Paddleup(CanvasArray);
-                        print(CanvasArray);
+
+                        else if (currentKey == ConsoleKey.DownArrow)
+                        {
+                            CanvasArray = Ply2Paddle.Paddledown(CanvasArray);
+                            print(CanvasArray);
+                            break;
+                        }
+
+                        else if (currentKey == ConsoleKey.W)
+                        {
+                            CanvasArray = Ply1Paddle.Paddleup(CanvasArray);
+                            print(CanvasArray);
+                            break;
+                        }
+
+                        else if (currentKey == ConsoleKey.S)
+                        {
+                            CanvasArray = Ply1Paddle.Paddledown(CanvasArray);
+                            print(CanvasArray);
+                            break;
+                        }
+                        else break;
                     }
 
-                    else if (currentKey == ConsoleKey.DownArrow)
-                    {
-                        CanvasArray = Ply2Paddle.Paddledown(CanvasArray);
-                        print(CanvasArray);
-                    }
-
-                    else if (currentKey == ConsoleKey.W)
-                    {
-                        CanvasArray = Ply1Paddle.Paddleup(CanvasArray);
-                        print(CanvasArray);
-                    }
-
-                    else if (currentKey == ConsoleKey.S)
-                    {
-                        CanvasArray = Ply1Paddle.Paddledown(CanvasArray);
-                        print(CanvasArray);
-                    }
-                    Ball.Iterate(CanvasArray);
+                    CanvasArray = Ball.Iterate(CanvasArray);
                     print(CanvasArray);
 
                 }
                 Ball.count++;
-                System.Console.WriteLine(Ball.count);
+                if (Ball.count > 10000000) Ball.count = 0;
+                // print(CanvasArray);
+                // System.Console.WriteLine(Ball.count);
             }
         }
         public static void print(char[,] Canvas)
