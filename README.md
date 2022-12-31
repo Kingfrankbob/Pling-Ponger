@@ -18,7 +18,7 @@ Checks for collision of a paddle or the top/bottom. It then Bounces according to
 It then iterates itself onto the canvas and moves accordingly hiding its tracks. To end it catches an IndexOutOfBounds Exception and determins the winner from there :)
 ### Canvas
 A 30 Long 10 tall array.
-### Current bot mode
+### Current bot mode (12/30/22)
 it changes every round, may add another difficulty other than impossible LMFAO
 
 ## Extras
