@@ -10,11 +10,11 @@ namespace PlingPong
         private int _stx;
         private int _sty;
         private string _momentum = "";
-        //public string debug = "";
         public Boolean start = false;
         public BigInteger count = new BigInteger(0);
         public Boolean Trygn = false;
         public Boolean CT = false;
+        public int btMd = 0;
         private int _prevx;
         private int _prevy;
         public Ball(int ymini, int ymaxi)
@@ -71,7 +71,10 @@ namespace PlingPong
             catch (Exception)
             {
                 if (_x <= 0)
-                    Console.WriteLine("Player 2 Wins!");
+                {
+                    if (btMd == 0) Console.WriteLine("Player 2 Wins!");
+                    else System.Console.WriteLine("The Bot Wins!");
+                }
                 else
                     Console.WriteLine("Player 1 Wins!");
                 _x = _stx;
@@ -156,15 +159,16 @@ namespace PlingPong
                 2. Try Again
                 3. Replay
                 4. Exit
+                5. Change Mode
                 ");
             switch (Console.ReadKey().Key)
             {
                 case (ConsoleKey.D1):
-                    Program.main(ball);
+                    Program.mainTwoPlayer(ball);
                     break;
                 case ConsoleKey.D2:
                     ball.Trygn = true;
-                    Program.main(ball);
+                    Program.mainTwoPlayer(ball);
                     break;
                 case ConsoleKey.D3:
                     Console.WriteLine("Sorry thats not possible atm!");
@@ -178,13 +182,21 @@ namespace PlingPong
                     break;
                 case ConsoleKey.Insert:
                     ball.CT = true;
-                    Program.main(ball);
+                    Program.mainTwoPlayer(ball);
+                    break;
+                case ConsoleKey.D5:
+                    Program.Main();
                     break;
                 default:
                     Console.WriteLine("Try Again!");
                     restart(ball);
                     break;
             }
+        }
+
+        public int Y
+        {
+            get { return _y; }
         }
     }
 }

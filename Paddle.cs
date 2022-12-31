@@ -9,6 +9,7 @@ namespace PlingPong
         private int _ylimit;
         private Boolean _Trygn = false;
         private Boolean _CT = false;
+        public int btMd = 0;
 
         public Paddle(int ex, int wy, int exl, int wyl, Ball ball)
         {
@@ -151,6 +152,28 @@ namespace PlingPong
             Canvas[_y + 2, _x] = ' ';
             Canvas[_y + 2, _x + 1] = ' ';
             return Canvas;
+        }
+
+        public char[,] botIteration(char[,] Canvas, Ball ball)
+        {
+
+            if (btMd == 0)
+                return Canvas;
+            else
+            {
+                if (ball.Y == _y)
+                {
+                    return Canvas;
+                }
+                else if (ball.Y > _y)
+                {
+                    return Paddleup(Canvas);
+                }
+                else
+                {
+                    return Paddledown(Canvas);
+                }
+            }
         }
 
 
