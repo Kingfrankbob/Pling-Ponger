@@ -11,7 +11,7 @@ namespace PlingPong
         private string _momentum = "";
         //public string debug = "";
         public Boolean start = false;
-
+        public Int64 count = 0;
         public Boolean Trygn = false;
         public Boolean CT = false;
         private int _prevx;
@@ -150,36 +150,36 @@ namespace PlingPong
         }
         public static void restart(Ball ball)
         {
-                Console.WriteLine(@"Please select a valid option:
+            Console.WriteLine(@"Please select a valid option:
                 1. Restart
                 2. Try Again
                 3. Replay
                 4. Exit
                 ");
-                switch (Console.ReadKey().Key)
-                {
-                    case (ConsoleKey.D1):
-                        Program.main(ball);
-                        break;
-                    case ConsoleKey.D2:
-                        ball.Trygn = true;
-                        Program.main(ball);
-                        break;
-                    case ConsoleKey.D3:
-                        Console.WriteLine("Sorry thats not possible atm!");
-                        restart(ball);
-                        break;
-                    case ConsoleKey.D4:
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Goodbye!");
-                        Console.ForegroundColor = ConsoleColor.Gray;
-                        Console.Beep(100, 500);
-                        break;
-                    case ConsoleKey.Insert:
-                        ball.CT = true;
-                        Program.main(ball);
-                        break;
-                    default:
+            switch (Console.ReadKey().Key)
+            {
+                case (ConsoleKey.D1):
+                    Program.main(ball);
+                    break;
+                case ConsoleKey.D2:
+                    ball.Trygn = true;
+                    Program.main(ball);
+                    break;
+                case ConsoleKey.D3:
+                    Console.WriteLine("Sorry thats not possible atm!");
+                    restart(ball);
+                    break;
+                case ConsoleKey.D4:
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Goodbye!");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Beep(100, 500);
+                    break;
+                case ConsoleKey.Insert:
+                    ball.CT = true;
+                    Program.main(ball);
+                    break;
+                default:
                     Console.WriteLine("Try Again!");
                     restart(ball);
                     break;

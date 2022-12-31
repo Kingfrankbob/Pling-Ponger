@@ -43,3 +43,18 @@ D:\Pling Ponger\obj\Debug\net6.0\refint\Pling Ponger.dll
 D:\Pling Ponger\obj\Debug\net6.0\Pling Ponger.pdb
 D:\Pling Ponger\obj\Debug\net6.0\Pling Ponger.genruntimeconfig.cache
 D:\Pling Ponger\obj\Debug\net6.0\ref\Pling Ponger.dll
+C:\Users\ajwpc\Github\Pling-Ponger\bin\Debug\net6.0\Pling Ponger.exe
+C:\Users\ajwpc\Github\Pling-Ponger\bin\Debug\net6.0\Pling Ponger.deps.json
+C:\Users\ajwpc\Github\Pling-Ponger\bin\Debug\net6.0\Pling Ponger.runtimeconfig.json
+C:\Users\ajwpc\Github\Pling-Ponger\bin\Debug\net6.0\Pling Ponger.dll
+C:\Users\ajwpc\Github\Pling-Ponger\bin\Debug\net6.0\Pling Ponger.pdb
+C:\Users\ajwpc\Github\Pling-Ponger\obj\Debug\net6.0\Pling Ponger.csproj.AssemblyReference.cache
+C:\Users\ajwpc\Github\Pling-Ponger\obj\Debug\net6.0\Pling Ponger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ajwpc\Github\Pling-Ponger\obj\Debug\net6.0\Pling Ponger.AssemblyInfoInputs.cache
+C:\Users\ajwpc\Github\Pling-Ponger\obj\Debug\net6.0\Pling Ponger.AssemblyInfo.cs
+C:\Users\ajwpc\Github\Pling-Ponger\obj\Debug\net6.0\Pling Ponger.csproj.CoreCompileInputs.cache
+C:\Users\ajwpc\Github\Pling-Ponger\obj\Debug\net6.0\Pling Ponger.dll
+C:\Users\ajwpc\Github\Pling-Ponger\obj\Debug\net6.0\refint\Pling Ponger.dll
+C:\Users\ajwpc\Github\Pling-Ponger\obj\Debug\net6.0\Pling Ponger.pdb
+C:\Users\ajwpc\Github\Pling-Ponger\obj\Debug\net6.0\Pling Ponger.genruntimeconfig.cache
+C:\Users\ajwpc\Github\Pling-Ponger\obj\Debug\net6.0\ref\Pling Ponger.dll
