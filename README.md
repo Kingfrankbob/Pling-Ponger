@@ -2,7 +2,7 @@
 ## How to run
 1. Download Zip File
 2. Extract
-3. Navigate to "\PlingPonger\\"
+3. Navigate to "\PlingPonger\" (Windows Terminal Will !!NOT!! Work, you have to use powershell)
 4. Run the program  VIA "dotnet run"
 
 ## Why?
@@ -18,6 +18,8 @@ Checks for collision of a paddle or the top/bottom. It then Bounces according to
 It then iterates itself onto the canvas and moves accordingly hiding its tracks. To end it catches an IndexOutOfBounds Exception and determins the winner from there :)
 ### Canvas
 A 30 Long 10 tall array.
+### Current bot mode
+it changes every round, may add another difficulty other than impossible LMFAO
 
 ## Extras
 Have fun with this simple game, I am thinking about implementing an ai!
